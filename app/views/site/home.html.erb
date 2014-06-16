@@ -1,0 +1,17 @@
+<h1>TheatreExpress</h1>
+
+<div class='search'>
+  <form>
+    <input type='text' placeholder='search'>
+    <input type='submit' value='Search'>
+  </form>
+</div>
+
+<div class='top_tht'>
+  <h2>Top Theaters in SLC</h2>
+  <% @theatres.each do |theatre| %>
+    <ul>
+      <li><%= link_to theatre.name, theatre_path(theatre.id) %></li>
+    </ul>
+  <% end %>
+</div>
